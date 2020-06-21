@@ -3,23 +3,60 @@
     <head>
         <title>Happy Fathers Day!</title>
         <style>
+        #textGreen{
+            background-color: #4CAF50; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        #textWhite{
+            background-color: #fdfdfd; 
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        #textOrange{
+            background-color: #e9820d; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        #factButton{
+            background-color: #41ccf7; 
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
         .flag{
             margin-left: 50px;
         }
-        #textChange{
-            background-color: wheat;
-            background-size: auto;
-            }
+        
         </style>   
     <body>
         <img src="https://user-images.githubusercontent.com/63752405/85216970-1f7d7b80-b359-11ea-8e61-a86e5041f1ed.JPG" height="200" width="400" class="flag">
         <br>
         <img src="https://user-images.githubusercontent.com/63752405/85226197-56c54a00-b3a4-11ea-8ed8-b97ea0308afe.jpg" height="400" width="500">
         <div class="col-sm-6 text-center">
-			<button class="btn btn-primary form-control" id="factButton">Random Grumpy Cat Fact</button>
+			<button id="factButton">Random Pop Fact</button>
 			<div class="well text-center">
 				<div>
-					<p id="factText">Click the button for a random Grumpy Cat fact!</p>
+					<p id="factText">Click the button for a random Pop fact!</p>
 				</div>
 			</div>
         </div>
@@ -31,9 +68,20 @@
 			<br>
 			<br>
 			<div class="textChange">
-				<span id="output" style="background-color: wheat">Pop Rules!</span>
+				<span id="output" style="background-color: wheat; font-size: x-large; margin-left: 110px;">Pop Rules!</span>
             </div>
-        <img src="https://user-images.githubusercontent.com/63752405/85226042-4fea0780-b3a3-11ea-9042-9e816f5bad70.JPG">
+        <img class="DadnMia" src="https://user-images.githubusercontent.com/63752405/85226042-4fea0780-b3a3-11ea-9042-9e816f5bad70.JPG" height="550" width="500">
+        <br>
+        <img class="RailTrail" src="https://user-images.githubusercontent.com/63752405/85228714-043f5a00-b3b3-11ea-8c17-ff281310e066.jpg" height="600" width="500">
+        <br>
+        <img class="BeckWed" src="https://user-images.githubusercontent.com/63752405/85228524-d0b00000-b3b1-11ea-82ac-b5bbc2ad87af.jpg" height="600" width="500">
+        <br>
+        <img class="DadBeck" src="https://user-images.githubusercontent.com/63752405/85229056-8e88bd80-b3b5-11ea-81dd-4cdb5ec039a2.jpg" height="600" width="500">
+        <br>
+        <img class="MiaDayOne" src="https://user-images.githubusercontent.com/63752405/85228655-972bc480-b3b2-11ea-9a40-2d8849699ad7.jpg" height="600" width="500">
+        <br>
+        <img class="TheBears" src="https://user-images.githubusercontent.com/63752405/85228681-d65a1580-b3b2-11ea-90f6-68227fb3f5fe.jpg" height="400" width="500">
+        <a href="#top">Back to top of page</a>
             <script>
                 document.getElementById("textGreen").onclick = function(){
                 document.getElementById("output").style.color = 'green';
@@ -46,7 +94,17 @@
                 document.getElementById("textWhite").onclick = function(){
                 document.getElementById("output").style.color = 'white';
                 }   
+                var factArray=["Every Thanksgiving my dad and I, with the help of the AOH, deliver up to 40 or 50 turkey dinners", 
+                "My Dad was named the Grand Marshal of the Mid-Hudson Valley Parade 2020", 
+                "My Dad was named an Aide to the Grand Marshal of the New York City Parade 2008",
+                "My Dad climbed the tallest Mountian in the Northeast US of 6,288ft called Mt Washington",
+                "My Dad can drink 8 pints of Guinness without having to go to the bathroom!",
+                "My Dads head is a prime salt lick for dogs"];
+                document.getElementById("factButton").onclick =function factGen(){
+                    var randomNum = Math.floor(Math.random()* (factArray.length));
+                    document.getElementById("factText").innerHTML = factArray[randomNum];
                 
+                }
             </script>
     </body>
 </html>
